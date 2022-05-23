@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #343a40;
+  font-family: 'Noto Sans Math', sans-serif;
+  overflow-x: hidden;
+}

@@ -1,8 +1,8 @@
 import { words } from '@/lib/words';
 
 export default {
-  word: '',
-  guesses: [],
+  word: 'guess',
+  guesses: ["tests", "guess", "tests"],
   currentGuess: 0,
   get won() {
     return this.guesses[this.currentGuess - 1] === this.word

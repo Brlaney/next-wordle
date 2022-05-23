@@ -1,11 +1,11 @@
 import { observer } from 'mobx-react-lite'
 
-export default observer(function Querty({ store }) {
+export default observer(function Qwerty({ store }) {
   const qwerty = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
   return (
     <div>
-      {qwerty.map((row) => (
-        <div className="flex justify-center">
+      {qwerty.map((row, i) => (
+        <div key={i} className="grid grid-rows-4 grid-flow-col gap-4 flex justify-center flex-wrap">
           {row.split('').map((char) => {
             const bgColor = store.exactGuesses.includes(char)
               ? 'bg-green-400'
