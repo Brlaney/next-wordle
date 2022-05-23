@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 
 
@@ -14,6 +18,7 @@ body {
   background-color: #343a40;
   font-family: 'Noto Sans Math', sans-serif;
   overflow-x: hidden;
+<<<<<<< HEAD
   max-height: 100vh;
 }
 
@@ -42,4 +47,6 @@ h1, h2, h3, h4, h5, h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+=======
+>>>>>>> 7d00cb30ed355c58aeaa51d24d99badbac8e998e
 }
