@@ -1,6 +1,6 @@
 import { observer, useLocalObservable } from 'mobx-react-lite';
 import PuzzleStore from '@/stores/PuzzleStore';
-import Qwerty from '@/components/Qwerty';
+import Qwerty from '@/components/Qwerty/Qwerty';
 import Guess from '@/components/Guess';
 
 export default observer(function Home() {
@@ -8,17 +8,15 @@ export default observer(function Home() {
 
   return (
     <div className='flex h-screen w-screen flex-col bg-gray-600'>
-      <h1
-        className='text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-green-400'
-      >
+      <h1 className='text-12xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-green-400'>
         Next-Wordle
       </h1>
       <Guess
-        word='tests'
-        guess='guess'
+        word={'tests'}
+        guess={'guess'}
         isGuessed={false}
       />
-      <h1>Won/Loss</h1>
+      <h1 className='text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-green-400'>Won/Loss</h1>
       <Qwerty
       />
     </div>

@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 
+
+// @tailwind base;
+// @tailwind componoents;
+// @tailwind utilities;
+// @layer components;
+
 html,
 body {
   margin: 0;
   padding: 0;
-  color: #343a40;
+  color: white;
+  background-color: #343a40;
   font-family: 'Noto Sans Math', sans-serif;
   overflow-x: hidden;
   max-height: 100vh;
@@ -16,7 +23,7 @@ a { font-family: 'Noto Sans Math', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
-  color: #343a40;
+  color: white;
   font-family: 'Noto Sans Math', sans-serif;
 }
 
