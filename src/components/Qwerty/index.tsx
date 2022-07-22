@@ -1,29 +1,20 @@
-import { observer } from 'mobx-react-lite'
+import { qwerty } from '@/lib/data/keyboard';
+import styles from '@/styles/components/Qwerty.module.scss';
 
-export default observer(function Qwerty({ store }) {
-  const qwerty = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
+export default function Qwerty() {
   return (
-    <div>
+    <>
       {qwerty.map((row, i) => (
-        <div key={i} className="grid grid-rows-4 grid-flow-col gap-4 flex justify-center flex-wrap">
+        <div key={i} className={styles['keyboard-grid']} >
           {row.split('').map((char) => {
-            const bgColor = store.exactGuesses.includes(char)
-              ? 'bg-green-400'
-              : store.inexactGuesses.includes(char)
-              ? 'bg-yellow-400'
-              : store.allGuesses.includes(char)
-              ? 'bg-gray-400'
-              : 'bg-gray-200'
             return (
-              <div
-                className={`rounded-m m-px flex h-10 w-10 items-center justify-center uppercase ${bgColor}`}
-              >
+              <div id={char} className={styles.key}>
                 {char}
               </div>
             )
           })}
         </div>
       ))}
-    </div>
+    </>
   )
-})
+}
