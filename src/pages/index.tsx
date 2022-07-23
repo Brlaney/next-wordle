@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // import { useRouter } from 'next/router';
 import Navbar from '@/components/Navbar';
 import Body from '@/components/Body';
@@ -16,9 +16,11 @@ const Home = () => {
   const [showStatsModal, setShowStatsModal] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
 
-  // const handleClose = () => {
-  //   setModalType(0)
-  // }
+  useEffect(() => {
+    if (modalType == 0) {
+      setOpenModal(0)
+    }
+  }, [modalType])
 
   return (
     <>

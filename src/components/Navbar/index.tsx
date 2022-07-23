@@ -8,17 +8,17 @@ import styles from '@/styles/components/Navbar.module.scss';
 
 export default function Navbar({ openState, open, theModalType, helpModal, statsModal, settingsModal }) {
   
-  const toggleState = (num) => {
-    if (!open) {
-      openState(true)
-      theModalType(num)
-    }
+  // const toggleState = (num) => {
+  //   if (!open) {
+  //     openState(true)
+  //     theModalType(num)
+  //   }
 
-    if (open) {
-      openState(false)
-      theModalType(0)
-    }
-  }
+  //   if (open) {
+  //     openState(false)
+  //     theModalType(0)
+  //   }
+  // }
   
   return (
     <div id={styles.navbar} className={styles['nav-container']}>
@@ -39,8 +39,8 @@ export default function Navbar({ openState, open, theModalType, helpModal, stats
           <div
             id='help-modal'
             className={styles.item}
-            // onClick={() => theModalType(1)}
-            onClick={() => toggleState(1)}
+            onClick={() => theModalType(1)}
+            // onClick={() => toggleState(1)}
           >
             <Help />
           </div>
