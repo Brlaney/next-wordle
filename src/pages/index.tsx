@@ -11,18 +11,30 @@ const Home = () => {
   const [openModal, setOpenModal] = useState(false);
 
   // const [showMenu, setShowMenu] = useState(false);
-  // const [showHelpModal, setShowHelpModal] = useState(false);
-  // const [showStatsModal, setShowStatsModal] = useState(false);
-  // const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showHelpModal, setShowHelpModal] = useState(false);
+  const [showStatsModal, setShowStatsModal] = useState(false);
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        openState={setOpenModal}
+        open={openModal}
+        helpModal={showHelpModal}
+        statsModal={showStatsModal}
+        settingsModal={showSettingsModal}
+      />
       <div className={styles.container}>
-        <button onClick={() => setOpenModal(true)} className={styles['modalBtn']}>
+        <button
+          className={styles['modal-btn']}
+          onClick={() => setOpenModal(true)}
+        >
           Modal
         </button>
-        <Modal open={openModal} onClose={() => setOpenModal(false)} />
+        <Modal
+          open={openModal}
+          onClose={() => setOpenModal(false)}
+        />
         <Body />
         <Qwerty />
       </div>

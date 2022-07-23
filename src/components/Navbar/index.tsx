@@ -6,7 +6,7 @@ import Graph from '@/components/Icons/Graph';
 import Settings from '@/components/Icons/Settings';
 import styles from '@/styles/components/Navbar.module.scss';
 
-export default function Navbar() {
+export default function Navbar({ openState, open, helpModal, statsModal, settingsModal }) {
   return (
     <div id={styles.navbar} className={styles['nav-container']}>
       <div className={styles['nav-row']}>
@@ -23,7 +23,7 @@ export default function Navbar() {
 
         {/* Right-end of Navbar */}
         <div id={styles.options} className={styles['nav-section']}>
-          <div id='help-modal' className={styles.item}>
+          <div id='help-modal' className={styles.item} onClick={() => openState(true)}>
             <Help />
           </div>
           <div id='stats-modal' className={styles.item}>
