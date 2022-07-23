@@ -1,5 +1,4 @@
 ﻿import Head from 'next/head';
-import Navbar from '@/components/Navbar';
 import seo from '@/lib/data/seo';
 import styles from '@/styles/components/Layout.module.scss';
 
@@ -14,7 +13,6 @@ const Layout = ({ children }) => {
         <link rel='icon' type='image/png' href='/grid-favicon.png' />
         <title>{seo.title}</title>
       </Head>
-      <Navbar />
       <main className={styles.main}>
         {children}
       </main>

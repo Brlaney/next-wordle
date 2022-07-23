@@ -1,5 +1,6 @@
 import { useState } from 'react';
 // import { useRouter } from 'next/router';
+import Navbar from '@/components/Navbar';
 import Body from '@/components/Body';
 import Qwerty from '@/components/Qwerty';
 import Modal from '@/components/Modal';
@@ -15,14 +16,17 @@ const Home = () => {
   // const [showSettingsModal, setShowSettingsModal] = useState(false);
 
   return (
-    <div className={styles.container}>
-      <button onClick={() => setOpenModal(true)} className={styles['modalBtn']}>
-        Modal
-      </button>
-      <Modal open={openModal} onClose={() => setOpenModal(false)} />
-      <Body />
-      <Qwerty />
-    </div>
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <button onClick={() => setOpenModal(true)} className={styles['modalBtn']}>
+          Modal
+        </button>
+        <Modal open={openModal} onClose={() => setOpenModal(false)} />
+        <Body />
+        <Qwerty />
+      </div>
+    </>
   )
 };
 

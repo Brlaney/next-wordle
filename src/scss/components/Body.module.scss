@@ -2,7 +2,9 @@
 @import '../mixins/width.scss';
 
 .main-container {
-  height: 70vh;
+  // revert back to:
+  // height: 70vh;
+  height: 68vh;
   width: 40%;
   color: white;
   display: flex;
