@@ -1,30 +1,24 @@
 // import React, { useEffect, useRef, useState } from 'react';
+import Help from '@/components/Modals/Help'
+import Stats from '@/components/Modals/Stats'
+import Settings from '@/components/Modals/Settings'
 import styles from '@/styles/components/Modal.module.scss';
 
-const Modal = ({ open, onClose }) => {
-  if (!open) return null;
-  return (
-    <div onClick={onClose} className={styles.overlay}>
-      <div className={styles['modal-container']} onClick={(e) => { e.stopPropagation(); }}>
-        <div className={styles['modal-right']}>
-          <p className={styles.closeBtn} onClick={onClose}>X</p>
-          <div className={styles.content}>
-            <p>Do you want a</p>
-            <h1>$20 CREDIT</h1>
-            <p>for your first tade?</p>
-          </div>
-          <div className={styles['btn-container']}>
-            <button className={styles['btn-primary']}>
-              <span className={styles.bold}>YES</span>, I love NFT's
-            </button>
-            <button className={styles['btn-outline']}>
-              <span className={styles.bold}>NO</span>, thanks
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+const Modal = ({ open, onClose, displayType }) => {
+  // Null display state:
+  // if (!open) return null;
+
+  // Display help modal:
+  if (displayType == 1) return <Help onClose={onClose} />;
+
+  // Display stats modal:
+  if (displayType == 2) return <Stats onClose={onClose} />;
+
+  // Display setting modal:
+  if (displayType == 3) return <Settings onClose={onClose} />;
+
+  return null;
+}
+
 
 export default Modal;

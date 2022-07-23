@@ -9,31 +9,32 @@ import styles from '@/styles/pages/Home.module.scss';
 const Home = () => {
   // let router = useRouter();
   const [openModal, setOpenModal] = useState(false);
+  const [modalType, setModalType] = useState(0 | 1 | 2 | 3);
 
   // const [showMenu, setShowMenu] = useState(false);
   const [showHelpModal, setShowHelpModal] = useState(false);
   const [showStatsModal, setShowStatsModal] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
 
+  // const handleClose = () => {
+  //   setModalType(0)
+  // }
+
   return (
     <>
       <Navbar
         openState={setOpenModal}
         open={openModal}
+        theModalType={setModalType}
         helpModal={showHelpModal}
         statsModal={showStatsModal}
         settingsModal={showSettingsModal}
       />
       <div className={styles.container}>
-        <button
-          className={styles['modal-btn']}
-          onClick={() => setOpenModal(true)}
-        >
-          Modal
-        </button>
         <Modal
           open={openModal}
-          onClose={() => setOpenModal(false)}
+          onClose={() => setModalType(0)}
+          displayType={modalType}
         />
         <Body />
         <Qwerty />
