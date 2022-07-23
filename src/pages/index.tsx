@@ -15,6 +15,6 @@ const Home = () => {
       <Qwerty />
     </div>
   )
-}
+};
 
 export default Home;
