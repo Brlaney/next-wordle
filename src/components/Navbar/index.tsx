@@ -1,5 +1,5 @@
 // import Link from 'next/link';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import Menu from '@/components/Icons/Menu';
 import Help from '@/components/Icons/Help';
 import Graph from '@/components/Icons/Graph';
@@ -7,8 +7,6 @@ import Settings from '@/components/Icons/Settings';
 import styles from '@/styles/components/Navbar.module.scss';
 
 export default function Navbar() {
-  const [showHelpModal, setShowHelpModal] = useState(false);
-
   return (
     <div id={styles.navbar} className={styles['nav-container']}>
       <div className={styles['nav-row']}>
@@ -25,10 +23,7 @@ export default function Navbar() {
 
         {/* Right-end of Navbar */}
         <div id={styles.options} className={styles['nav-section']}>
-          <div id='help-modal' 
-            className={styles.item}
-            onClick={() => setShowHelpModal(true)}
-          >
+          <div id='help-modal' className={styles.item}>
             <Help />
           </div>
           <div id='stats-modal' className={styles.item}>
