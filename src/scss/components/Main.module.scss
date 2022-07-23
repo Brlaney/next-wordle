@@ -1,0 +1,12 @@
+@import '../theme/theme';
+@import '../mixins/width.scss';
+
+.main-container {
+  height: 60vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

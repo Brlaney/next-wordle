@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
+@import './theme/theme';
 
 html,
 body {
   margin: 0;
   padding: 0;
   color: white;
-  background-color: #343a40;
+  background-color: $bg;
   font-family: $primary-font;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-a { font-family: $tertiary-font; }
+a { font-family: $primary-font; }
 
 * { box-sizing: border-box; }
 
 h1, h2 {
   color: $bg-d;
-  font-family: $secondary-font;
+  font-family: $primary-font;
 }
 
-/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
 }

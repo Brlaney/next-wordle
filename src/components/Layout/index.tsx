@@ -1,5 +1,5 @@
 ﻿import Head from 'next/head';
-// import Navbar from './Navbar';
+import Navbar from '@/components/Navbar';
 import seo from '@/lib/data/seo';
 import styles from '@/styles/components/Layout.module.scss';
 
@@ -14,12 +14,10 @@ const Layout = ({ children }) => {
         <link rel='icon' type='image/png' href='/next-ts.png' />
         <title>{seo.title}</title>
       </Head>
-      {/* <Navbar /> */}
-      <div className={styles.container}>
-        <main className={styles.main}>
-          {children}
-        </main>
-      </div>
+      <Navbar />
+      <main className={styles.main}>
+        {children}
+      </main>
     </>
   )
 };

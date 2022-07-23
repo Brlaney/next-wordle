@@ -2,6 +2,10 @@
 
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 
+$keys: #818384;
+$bg: #121213;
+$box-border: #3a3a3c;
+
 // Palette
 $primary: #3DC2A3;
 $secondary: #3d69c2;
@@ -24,16 +28,6 @@ $bg-d: #343a40;
 $bg-m: #525a61;
 $bg-l: #cacfd6ff;
 $bg-ll: #d6e5e3ff;
-$bg-d-100: rgb(205, 213, 220);
-$bg-d-300: rgb(164, 171, 178);
-$bg-d-500: rgb(124, 131, 138);
-$bg-d-700: rgb(87, 93, 100);
-$bg-d-900: rgb(52, 58, 64);
-$bg-df-100: rgba(205, 213, 220, 0.6);
-$bg-df-300: rgba(164, 171, 178, 0.6);
-$bg-df-500: rgba(124, 131, 138, 0.6);
-$bg-df-700: rgba(87, 93, 100, 0.6);
-$bg-df-900: rgba(52, 58, 64, 0.85);
 
 // Box-shadows
 $base-box-shadow-xs: rgba(0, 0, 0, 0.06) 0px 2px 1px;
