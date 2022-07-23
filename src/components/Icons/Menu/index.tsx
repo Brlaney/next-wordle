@@ -2,8 +2,8 @@ export default function Menu() {
   return (
     <>
       <svg
-        width="32"
-        height="32"
+        width="28"
+        height="28"
         viewBox="0 0 22 22"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
