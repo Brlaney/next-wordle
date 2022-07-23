@@ -1,0 +1,8 @@
+@import '../theme/theme';
+@import '../mixins/width.scss';
+
+.modal-details {
+    box-shadow: $base-box-shadow-sm;
+}
+
+// className="object-cover rounded shadow-lg h-[66vh] w-full"
