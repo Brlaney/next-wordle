@@ -7,6 +7,9 @@
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid $box-border;
+  align-items: center;
+  justify-content: center;
+
   .nav-row {
     width: 100%;
     display: flex;
@@ -14,13 +17,36 @@
     align-items: center;
     justify-content: space-between;
 
+    
     .nav-section {
+      display: flex;
+      flex-direction: row;
       padding: 0 16px;
+      align-items: center;
+      justify-content: center;
+      
+      .item {
+        margin: 0 4px;
+      }
+      
+      .item:hover {
+        cursor: pointer;
+      }
     }
 
     #title {
+      position: absolute;
+      right: 42%;
+      // flex: auto;
+      // flex-direction: column;
+      // position: relative;
+      // width:fit-content;
       font-size: 32px;
       font-weight: 700;
+      text-align: center;
+      align-self: center;
+      padding: auto;
+      margin: auto;
     }
   }
 }

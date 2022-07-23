@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='keywords' content={seo.keywords} />
         <meta name='description' content={seo.description} />
-        <link rel='icon' type='image/png' href='/next-ts.png' />
+        <link rel='icon' type='image/png' href='/grid-favicon.png' />
         <title>{seo.title}</title>
       </Head>
       <Navbar />

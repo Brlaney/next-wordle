@@ -18,6 +18,22 @@
     padding: 0.3rem 0.2rem;
     margin: 0 0.2rem;
 
+    .enter {
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: $keys;
+      border: none;
+      height: 58px;
+      width: 65px;
+      color: white;
+      text-transform: uppercase;
+      margin: 0 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
     .key {
       font-size: 16px;
       border-radius: 4px;
@@ -25,6 +41,38 @@
       border: none;
       height: 58px;
       width: 43px;
+      color: white;
+      text-transform: uppercase;
+      margin: 0 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .wide-key {
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: $keys;
+      border: none;
+      height: 58px;
+      width: 65px;
+      color: white;
+      text-transform: uppercase;
+      margin: 0 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .enter {
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: $keys;
+      border: none;
+      height: 58px;
+      width: 65px;
       color: white;
       text-transform: uppercase;
       margin: 0 3px;

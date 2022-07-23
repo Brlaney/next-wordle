@@ -1,6 +1,12 @@
+export interface IKeys {
+  pk: number;
+  rowNumber: number;
+  key: string;
+}
+
 export interface IKeyboard {
-  row: number;
-  keys: string[];
+  rowNumber: number;
+  keys: IKeys[];
 };
 
 export interface IBoxes {
