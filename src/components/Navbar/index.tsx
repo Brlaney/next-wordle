@@ -1,5 +1,5 @@
 // import Link from 'next/link';
-// import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Menu from '@/components/Icons/Menu';
 import Help from '@/components/Icons/Help';
 import Graph from '@/components/Icons/Graph';
@@ -7,19 +7,13 @@ import Settings from '@/components/Icons/Settings';
 import styles from '@/styles/components/Navbar.module.scss';
 
 export default function Navbar({ openState, open, theModalType, helpModal, statsModal, settingsModal }) {
-  
-  // const toggleState = (num) => {
-  //   if (!open) {
-  //     openState(true)
-  //     theModalType(num)
-  //   }
 
-  //   if (open) {
-  //     openState(false)
-  //     theModalType(0)
-  //   }
-  // }
-  
+  useEffect(() => {
+    if (theModalType > 0) {
+      openState(true)
+    }
+  }, [theModalType])
+
   return (
     <div id={styles.navbar} className={styles['nav-container']}>
       <div className={styles['nav-row']}>
@@ -40,7 +34,6 @@ export default function Navbar({ openState, open, theModalType, helpModal, stats
             id='help-modal'
             className={styles.item}
             onClick={() => theModalType(1)}
-            // onClick={() => toggleState(1)}
           >
             <Help />
           </div>

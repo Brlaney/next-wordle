@@ -6,7 +6,7 @@ import styles from '@/styles/components/Modal.module.scss';
 
 const Modal = ({ open, onClose, displayType }) => {
   // Null display state:
-  // if (!open) return null;
+  if (!open) return null;
 
   // Display help modal:
   if (displayType == 1) return <Help onClose={onClose} />;

@@ -9,7 +9,7 @@ import styles from '@/styles/pages/Home.module.scss';
 const Home = () => {
   // let router = useRouter();
   const [openModal, setOpenModal] = useState(false);
-  const [modalType, setModalType] = useState(0 | 1 | 2 | 3);
+  const [modalType, setModalType] = useState<number>(0);
 
   // const [showMenu, setShowMenu] = useState(false);
   const [showHelpModal, setShowHelpModal] = useState(false);
@@ -18,7 +18,9 @@ const Home = () => {
 
   useEffect(() => {
     if (modalType == 0) {
-      setOpenModal(0)
+      setOpenModal(false)
+    } else {
+      setOpenModal(true)
     }
   }, [modalType])
 
