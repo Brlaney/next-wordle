@@ -1,4 +1,4 @@
-import styles from '@/styles/Modals/StatsModal.module.scss';
+import styles from '@/styles/components/Modal.module.scss';
 
 export default function Stats({onClose}) {
   return (

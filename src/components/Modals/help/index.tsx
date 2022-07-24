@@ -1,4 +1,4 @@
-import styles from '@/styles/Modals/HelpModal.module.scss';
+import styles from '@/styles/components/Modal.module.scss';
 
 export default function Help({onClose}) {
   return (

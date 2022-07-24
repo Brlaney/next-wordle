@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import Menu from '@/components/Icons/Menu';
 import Help from '@/components/Icons/Help';
-import Graph from '@/components/Icons/Graph';
+import Stats from '@/components/Icons/Stats';
 import Settings from '@/components/Icons/Settings';
 import styles from '@/styles/components/Navbar.module.scss';
 
@@ -31,21 +31,21 @@ export default function Navbar({ openState, open, theModalType, helpModal, stats
         {/* Right-end of Navbar */}
         <div id={styles.options} className={styles['nav-section']}>
           <div
-            id='help-modal'
+            id={styles['help-modal']}
             className={styles.item}
             onClick={() => theModalType(1)}
           >
             <Help />
           </div>
           <div
-            id='stats-modal'
+            id={styles['stats-modal']}
             className={styles.item}
             onClick={() => theModalType(2)}
-          >
-            <Graph />
+            >
+            <Stats />
           </div>
           <div
-            id='settings-modal'
+            id={styles['settings-modal']}
             className={styles.item}
             onClick={() => theModalType(3)}
           >

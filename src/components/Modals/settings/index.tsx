@@ -1,4 +1,4 @@
-import styles from '@/styles/Modals/SettingsModal.module.scss';
+import styles from '@/styles/components/Modal.module.scss';
 
 export default function Settings({onClose}) {
   return (

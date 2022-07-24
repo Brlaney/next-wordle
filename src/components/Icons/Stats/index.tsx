@@ -1,4 +1,4 @@
-export default function Graph() {
+export default function Stats() {
   return (
     <>
       <svg
