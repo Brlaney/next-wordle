@@ -1,4 +1,5 @@
 @import '../theme/theme';
+@import '../mixins/width.scss';
 
 .nav-container {
   height: 66px;
@@ -10,7 +11,7 @@
   flex-direction: row;
   border-bottom: 1px solid $box-border;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   .nav-row {
     width: 100%;
@@ -18,18 +19,23 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
+
     .nav-section {
+      min-width: 140px;
       display: flex;
       flex-direction: row;
       padding: 0 16px;
       align-items: center;
-      justify-content: center;
-      
+      justify-content: space-between;
+
+      @include respond-below-width(sm) {
+        min-width: 60px;
+      }
+
       .item {
         margin: 0 4px;
       }
-      
+
       .item:hover {
         cursor: pointer;
       }
@@ -37,17 +43,34 @@
       #stats-modal {
         margin: 0 0 0 4px;
       }
+
+      #settings-modal {
+        @include respond-below-width(md) {
+          margin: 0 0 0 4px;
+
+          @include respond-below-width(sm) {
+            margin: 0 28px 0 4px;
+
+            @include respond-below-width(xs) {
+              margin: 0 48px 0 4px;
+            }
+          }
+        }
+      }
     }
 
     #title {
-      position: absolute;
-      right: 42%;
       font-size: 32px;
       font-weight: 700;
       text-align: center;
       align-self: center;
       padding: auto;
       margin: auto;
+
+      @include respond-below-width(sm) {
+        width: 100%;
+        text-align: left;
+      }
     }
   }
 }

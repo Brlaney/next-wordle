@@ -1,8 +1,8 @@
 @import '../theme/theme';
 @import '../mixins/width.scss';
+@import '../mixins/height.scss';
 
 .main-container {
-  // revert back to:
   height: 70vh;
   width: 80%;
   max-width: 400px;
@@ -11,6 +11,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include respond-below-height(lg) {
+    height: 69vh;
+    @include respond-below-height(md) {
+      height: 67vh;
+      @include respond-below-height(sm) {
+        height: 65vh;
+        @include respond-below-height(xs) {
+          height: 63vh;
+        }
+      }
+    }
+  }
 
   .grid {
     display: flex;
@@ -32,7 +44,7 @@
     }
     
     .box:hover {
-      cursor: point;
+      cursor: pointer;
     }
   }
 }

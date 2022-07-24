@@ -1,18 +1,22 @@
 // import Link from 'next/link';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Menu from '@/components/Icons/Menu';
 import Help from '@/components/Icons/Help';
 import Stats from '@/components/Icons/Stats';
 import Settings from '@/components/Icons/Settings';
 import styles from '@/styles/components/Navbar.module.scss';
 
-export default function Navbar({ openState, open, theModalType, helpModal, statsModal, settingsModal }) {
+export default function Navbar({ openState, theModalType }) {
+  const [btnState, setBtnState] = useState<boolean>(false);
 
   useEffect(() => {
     if (theModalType > 0) {
-      openState(true)
+      openState(true);
+      setBtnState(true);
+    } else {
+      setBtnState(false);
     }
-  }, [theModalType])
+  }, [theModalType]);
 
   return (
     <div id={styles.navbar} className={styles['nav-container']}>
@@ -20,7 +24,9 @@ export default function Navbar({ openState, open, theModalType, helpModal, stats
 
         {/* Left-end of Navbar */}
         <div id={styles.menu} className={styles['nav-section']}>
-          <div className={styles.item}><Menu /></div>
+          <div className={styles.item}>
+            <Menu display={btnState} />
+          </div>
         </div>
 
         {/* Navbar center title */}
@@ -35,21 +41,21 @@ export default function Navbar({ openState, open, theModalType, helpModal, stats
             className={styles.item}
             onClick={() => theModalType(1)}
           >
-            <Help />
+            <Help display={btnState} />
           </div>
           <div
             id={styles['stats-modal']}
             className={styles.item}
             onClick={() => theModalType(2)}
-            >
-            <Stats />
+          >
+            <Stats display={btnState} />
           </div>
           <div
             id={styles['settings-modal']}
             className={styles.item}
             onClick={() => theModalType(3)}
           >
-            <Settings />
+            <Settings display={btnState} />
           </div>
         </div>
       </div>

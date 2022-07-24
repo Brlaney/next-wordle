@@ -1,4 +1,4 @@
-export default function Stats() {
+export default function Stats({ display }) {
   return (
     <>
       <svg
@@ -10,7 +10,7 @@ export default function Stats() {
       >
         <path
           d="M1.5 8.5V20.5H8.5V8.5H1.5Z"
-          stroke="white" 
+          stroke="white"
           strokeWidth="2"
           strokeLinecap="square"
         />
