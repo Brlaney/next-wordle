@@ -49,9 +49,10 @@ const Home = () => {
    const res = await fetch(endpoint);
    const words: String[] = await res.json();
    const words = await res.json();
+   
    return {
      props: {
-       topics
+       words
      }
    }
  };
