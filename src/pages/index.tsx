@@ -1,46 +1,50 @@
-import { observer, useLocalObservable } from 'mobx-react-lite';
-import { useEffect } from 'react';
-import Guess from '@/components/Guess';
+import { useState, useEffect } from 'react';
+// import { useRouter } from 'next/router';
+import Navbar from '@/components/Navbar';
+import Body from '@/components/Body';
 import Qwerty from '@/components/Qwerty';
-import PuzzleStore from '@/stores/PuzzleStore';
+import Modal from '@/components/Modal';
+import styles from '@/styles/pages/Home.module.scss';
 
-export default observer(function Home() {
-  const store = useLocalObservable(() => PuzzleStore)
-  
+const Home = () => {
+  // let router = useRouter();
+  const [openModal, setOpenModal] = useState(false);
+  const [modalType, setModalType] = useState<number>(0);
+
+  // const [showMenu, setShowMenu] = useState(false);
+  const [showHelpModal, setShowHelpModal] = useState(false);
+  const [showStatsModal, setShowStatsModal] = useState(false);
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
+
   useEffect(() => {
-    store.init()
-    window.addEventListener('keyup', store.handleKeyup)
-
-    return () => {
-      window.removeEventListener('keyup', store.handleKeyup)
+    if (modalType == 0) {
+      setOpenModal(false)
+    } else {
+      setOpenModal(true)
     }
-  }, [])
+  }, [modalType])
 
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center bg-gray-600">
-      <h1 className="bg-gradient-to-br from-blue-400 to-green-400 bg-clip-text text-6xl font-bold uppercase text-transparent">
-        Wordle
-      </h1>
-      {store.guesses.map((_, i) => (
-        <Guess
-          key={i}
-          word={store.word}
-          guess={store.guesses[i]}
-          isGuessed={i < store.currentGuess}
+    <>
+      <Navbar
+        openState={setOpenModal}
+        open={openModal}
+        theModalType={setModalType}
+        helpModal={showHelpModal}
+        statsModal={showStatsModal}
+        settingsModal={showSettingsModal}
+      />
+      <div className={styles.container}>
+        <Modal
+          open={openModal}
+          onClose={() => setModalType(0)}
+          displayType={modalType}
         />
-      ))}
-      {store.won && <h1>You won!</h1>}
-      {store.lost && <h1>You lost!</h1>}
-      {(store.won || store.lost) && (
-        <button
-          className="btn btn-blue"
-          onClick={store.init}
-        >
-          Play Again
-        </button>
-      )}
-      <Qwerty store={store} />
-      Word: {store.word}
-    </div>
+        <Body />
+        <Qwerty />
+      </div>
+    </>
   )
-})
+};
+
+export default Home;

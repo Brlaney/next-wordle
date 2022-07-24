@@ -1,29 +1,28 @@
-import { observer } from 'mobx-react-lite'
+import { rows } from '@/lib/data/keyboard';
+import { IKeyboard, IKeys } from '@/lib/types'
+import Back from '@/components/Icons/Back';
+import styles from '@/styles/components/Qwerty.module.scss';
 
-export default observer(function Qwerty({ store }) {
-  const qwerty = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
+const Qwerty = () => {
   return (
-    <div>
-      {qwerty.map((row, i) => (
-        <div key={i} className="grid grid-rows-4 grid-flow-col gap-4 flex justify-center flex-wrap">
-          {row.split('').map((char) => {
-            const bgColor = store.exactGuesses.includes(char)
-              ? 'bg-green-400'
-              : store.inexactGuesses.includes(char)
-              ? 'bg-yellow-400'
-              : store.allGuesses.includes(char)
-              ? 'bg-gray-400'
-              : 'bg-gray-200'
-            return (
-              <div
-                className={`rounded-m m-px flex h-10 w-10 items-center justify-center uppercase ${bgColor}`}
-              >
-                {char}
+    <div className={styles['keyboard-container']}>
+
+      {rows.map((row: IKeyboard) => (
+        <div key={row.rowNumber} className={styles['keyboard-grid']}>
+
+          {row.keys.map((row: IKeys) => (
+            (row.rowNumber != 3 ? (
+              <div key={row.pk} className={styles.key}>{row.key}</div>
+            ) : (
+              <div key={row.pk} className={row.pk == 21 || row.pk == 29 ? styles['wide-key'] : styles.key}>
+                {row.pk == 29 ? (<Back />) : (<>{row.key}</>)}
               </div>
-            )
-          })}
+            ))
+          ))}
         </div>
       ))}
     </div>
   )
-})
+};
+
+export default Qwerty;

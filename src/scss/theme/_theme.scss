@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&family=Raleway:wght@300;400;500;600&family=Noto+Sans+Math&display=swap');
+
+
+$green: #6aaa64;
+$darkendGreen: #538d4e;
+$yellow: #c9b458;
+$darkendYellow: #b59f3b;
+$lightGray: #d3d6da;
+$gray: #86888a;
+$gray-2: #dcdcdc;
+$gray-3: #dfdfdf;
+$darkGray: #939598;
+$white: #fff;
+$black: #212121;
+$black-2: #121212;
+$black-3: #363636;
+$orange: #f5793a;
+$blue: #85c0f9;
+
+$keys: #818384;
+$bg: #121213;
+$box-border: #3a3a3c;
+
+
+// Palette
+$primary: #3DC2A3;
+$secondary: #3d69c2;
+$c-warning: #ad1714;
+$c-success: #46c23d;
+$light: #f6f8ffff;
+$dark: #272d2dff;
+$border-color: #e5e5e5;
+
+// Basic colors
+$text-light: #eaeaea;
+$text-color: #011627;
+$text-secondary: #496a81;
+$white: #ffffff;
+$black: #000000;
+
+// Background colors
+$bg-dark: #1c1c1c;
+$bg-d: #343a40;
+$bg-m: #525a61;
+$bg-l: #cacfd6ff;
+$bg-ll: #d6e5e3ff;
+
+// Box-shadows
+$base-box-shadow-xs: rgba(0, 0, 0, 0.06) 0px 2px 1px;
+$base-box-shadow-sm: rgba(0, 0, 0, 0.08) 0px 4px 7px;
+$base-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+$base-box-shadow-lg: rgba(0, 0, 0, 0.4) 0px 8px 14px;
+
+// Borders
+$border-radius-sm: 3px;
+$border-radius-md: 6px;
+$border-radius-lg: 9px;
+
+// Column margins
+$col-margin-sm: 0.44rem 0;
+$col-margin: 0.88rem 0;
+$col-margin-md: 1.32rem 0;
+$col-margin-lg: 1.76rem 0;
+
+// Row margins
+$row-margin-sm: 0 0.44rem;
+$row-margin: 0 0.88rem;
+$row-margin-md: 0 1.32rem;
+$row-margin-lg: 0 1.76rem;
+
+// Column paddings
+$col-padding-sm: 0.44rem 0;
+$col-padding: 0.88rem 0;
+$col-padding-md: 1.32rem 0;
+$col-padding-lg: 1.76rem 0;
+
+// Row paddings
+$row-padding-sm: 0 0.44rem;
+$row-padding: 0 0.88rem;
+$row-padding-md: 0 1.32rem;
+$row-padding-lg: 0 1.76rem;
+
+// Fonts
+$primary-font: 'Rubik',
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+'Roboto',
+'Oxygen',
+'Ubuntu',
+'Cantarell',
+'Fira Sans',
+'Droid Sans',
+'Helvetica Neue',
+sans-serif;

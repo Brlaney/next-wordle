@@ -1,0 +1,49 @@
+@import '../theme/theme';
+
+.nav-container {
+  height: 66px;
+  width: 100vw;
+  background-color: $bg;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: row;
+  border-bottom: 1px solid $box-border;
+  align-items: center;
+  justify-content: center;
+
+  .nav-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    .nav-section {
+      display: flex;
+      flex-direction: row;
+      padding: 0 16px;
+      align-items: center;
+      justify-content: center;
+      
+      .item {
+        margin: 0 4px;
+      }
+      
+      .item:hover {
+        cursor: pointer;
+      }
+    }
+
+    #title {
+      position: absolute;
+      right: 42%;
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      align-self: center;
+      padding: auto;
+      margin: auto;
+    }
+  }
+}
