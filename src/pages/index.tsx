@@ -16,6 +16,8 @@ const Home = ({ word }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const v = lowerCaseSolution.split('');
 
   useEffect(() => {
+    console.log(solution);
+
     if (modalType == 0) {
       setOpenModal(false)
     } else {

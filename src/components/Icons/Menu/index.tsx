@@ -11,20 +11,20 @@ export default function Menu({ display }) {
         <path
           d="M3.5 37H18.5"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="square"
+          strokeWidth="2"
+          strokeLinecap="square"
         />
         <path
           d="M3.5 31H18.5"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="square"
+          strokeWidth="2"
+          strokeLinecap="square"
         />
         <path
           d="M3.5 25H18.5"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="square"
+          strokeWidth="2"
+          strokeLinecap="square"
         />
       </svg>
     </>
