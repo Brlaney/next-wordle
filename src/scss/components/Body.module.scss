@@ -3,8 +3,7 @@
 @import '../mixins/height.scss';
 
 .main-container {
-  // height: 55vh;
-  width: 80%;
+  width: 1000%;
   max-width: 400px;
   color: white;
   display: flex;
@@ -43,8 +42,8 @@
       text-align: center;
     }
     
-    .box:hover {
-      cursor: pointer;
-    }
+    // .box:hover {
+    //   cursor: pointer;
+    // }
   }
 }
