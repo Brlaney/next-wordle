@@ -1,7 +1,7 @@
 export interface IKeys {
   pk: number;
-  rowNumber: number;
-  key: string;
+  row: number;
+  chr: string;
 }
 
 export interface IKeyboard {

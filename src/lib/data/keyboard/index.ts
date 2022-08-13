@@ -1,49 +1,32 @@
-import { IKeyboard } from '@/lib/types'
+import { IKeys } from '@/lib/types'
 
-export const rows: IKeyboard[] = [
-    {
-        rowNumber: 1,
-        keys: [
-            { pk: 1, rowNumber: 1, key: 'q' },
-            { pk: 2, rowNumber: 1, key: 'w' },
-            { pk: 3, rowNumber: 1, key: 'w' },
-            { pk: 4, rowNumber: 1, key: 'e' },
-            { pk: 5, rowNumber: 1, key: 'r' },
-            { pk: 6, rowNumber: 1, key: 't' },
-            { pk: 7, rowNumber: 1, key: 'y' },
-            { pk: 8, rowNumber: 1, key: 'u' },
-            { pk: 9, rowNumber: 1, key: 'i' },
-            { pk: 10, rowNumber: 1, key: 'o' },
-            { pk: 11, rowNumber: 1, key: 'p' }
-        ]
-    },
-    {
-        rowNumber: 2,
-        keys: [
-            { pk: 12, rowNumber: 2, key: 'a' },
-            { pk: 13, rowNumber: 2, key: 's' },
-            { pk: 14, rowNumber: 2, key: 'd' },
-            { pk: 15, rowNumber: 2, key: 'f' },
-            { pk: 16, rowNumber: 2, key: 'g' },
-            { pk: 17, rowNumber: 2, key: 'h' },
-            { pk: 18, rowNumber: 2, key: 'j' },
-            { pk: 19, rowNumber: 2, key: 'k' },
-            { pk: 20, rowNumber: 2, key: 'l' }
-        ]
-    },
-    {
-        rowNumber: 3,
-        keys: [
-            { pk: 21, rowNumber: 3, key: 'enter' },
-            { pk: 22, rowNumber: 3, key: 'z' },
-            { pk: 23, rowNumber: 3, key: 'x' },
-            { pk: 24, rowNumber: 3, key: 'c' },
-            { pk: 25, rowNumber: 3, key: 'v' },
-            { pk: 26, rowNumber: 3, key: 'b' },
-            { pk: 27, rowNumber: 3, key: 'n' },
-            { pk: 28, rowNumber: 3, key: 'm' },
-            { pk: 29, rowNumber: 3, key: '<' }
-        ]
-    },
+export const rows: IKeys[] = [
+    { pk: 1, row: 1, chr: 'q' },
+    { pk: 2, row: 1, chr: 'w' },
+    { pk: 3, row: 1, chr: 'e' },
+    { pk: 4, row: 1, chr: 'r' },
+    { pk: 5, row: 1, chr: 't' },
+    { pk: 6, row: 1, chr: 'y' },
+    { pk: 7, row: 1, chr: 'u' },
+    { pk: 8, row: 1, chr: 'i' },
+    { pk: 9, row: 1, chr: 'o' },
+    { pk: 10, row: 1, chr: 'p' },
+    { pk: 11, row: 2, chr: 'a' },
+    { pk: 12, row: 2, chr: 's' },
+    { pk: 13, row: 2, chr: 'd' },
+    { pk: 14, row: 2, chr: 'f' },
+    { pk: 15, row: 2, chr: 'g' },
+    { pk: 16, row: 2, chr: 'h' },
+    { pk: 17, row: 2, chr: 'j' },
+    { pk: 18, row: 2, chr: 'k' },
+    { pk: 19, row: 2, chr: 'l' },
+    { pk: 20, row: 3, chr: 'enter' },
+    { pk: 21, row: 3, chr: 'z' },
+    { pk: 22, row: 3, chr: 'x' },
+    { pk: 23, row: 3, chr: 'c' },
+    { pk: 24, row: 3, chr: 'v' },
+    { pk: 25, row: 3, chr: 'b' },
+    { pk: 26, row: 3, chr: 'n' },
+    { pk: 27, row: 3, chr: 'm' },
+    { pk: 28, row: 3, chr: 'back' }
 ];
-

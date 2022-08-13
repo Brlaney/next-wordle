@@ -2,7 +2,7 @@
 @import '../mixins/width.scss';
 
 .nav-container {
-  height: 70px;
+  height: 66px;
   width: 100vw;
   background-color: $bg;
   display: flex;
@@ -32,17 +32,15 @@
     .nav-section {
       height: 100%;
       min-width: 140px;
-      // margin: 0 0.33rem 0 0.13rem;
       display: flex;
       flex-direction: row;
-      // padding: 0.33rem;
       align-items: center;
       justify-content: space-between;
 
       @include respond-below-width(sm) {
         min-width: 60px;
       }
-// 
+
       // .item {
         // margin: 0 4px;
         // height: 62px;
@@ -86,6 +84,10 @@
         margin: 0;
         padding: 0;
       }
+    }
+
+    #title:hover {
+      cursor: default;
     }
   }
 }

@@ -2,21 +2,31 @@ import { useState, useEffect } from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Navbar from '@/components/Navbar';
 import Body from '@/components/Body';
-import Qwerty from '@/components/Qwerty';
+import Keyboard from '@/components/Keyboard';
 import Modal from '@/components/Modal';
 import styles from '@/styles/pages/Home.module.scss';
 
 const Home = ({ word }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const [openModal, setOpenModal] = useState(false);
-  const [modalType, setModalType] = useState<number>(0);
-  const [solution, setSolution] = useState<string>(word.word);
-  const [parsedSolution, setParsedSolution] = useState(['', '', '', '', '']);
+  const [firstLoad, setFirstLoad] = useState<Boolean>(true);
 
-  const lowerCaseSolution = solution.toLowerCase();
-  const v = lowerCaseSolution.split('');
+  const [openModal, setOpenModal] = useState<Boolean>(false);
+  const [modalType, setModalType] = useState<number>(0);
+
+  const [solution, setSolution] = useState<string>(word.word);
+  const [parsedSolution, setParsedSolution] = useState<string[]>(solution.toUpperCase().split(''));
+
+  const [selected, setSelected] = useState<string[]>();
+
 
   useEffect(() => {
-    console.log(solution);
+    // (Test) Display solution:
+    // console.log(solution);
+    // console.log(parsedSolution);
+    // console.log(selected);
+
+    if (firstLoad) {
+      setFirstLoad(false);
+    }
 
     if (modalType == 0) {
       setOpenModal(false)
@@ -38,16 +48,19 @@ const Home = ({ word }: InferGetStaticPropsType<typeof getStaticProps>) => {
           displayType={modalType}
         />
         <Body />
-        <Qwerty />
+        <Keyboard
+          solution={parsedSolution}
+        />
       </div>
     </>
   )
 };
 
 export const getStaticProps: GetStaticProps = async _context => {
-  // There are 659 words currently contained in this endpoint
+  // Current number of words: 659 
   let randomInt = Math.floor(Math.random() * 659) + 1;
   const endpoint = `${process.env.NEXT_PUBLIC_SERVER}/api/words/${randomInt}`;
+
   const res = await fetch(endpoint);
   const data = await res.json();
 

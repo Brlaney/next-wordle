@@ -3,13 +3,12 @@
 @import '../mixins/height.scss';
 
 .main-container {
-  width: 1000%;
   max-width: 400px;
   color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 520px;
   @include respond-below-height(lg) {
     height: 69vh;
     @include respond-below-height(md) {
@@ -24,10 +23,10 @@
   }
 
   .grid {
+    height: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
 
     .box {
@@ -41,9 +40,5 @@
       border: 2px solid $box-border;
       text-align: center;
     }
-    
-    // .box:hover {
-    //   cursor: pointer;
-    // }
   }
 }

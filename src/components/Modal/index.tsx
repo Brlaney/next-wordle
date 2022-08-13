@@ -1,8 +1,8 @@
 // import React, { useEffect, useRef, useState } from 'react';
-import Help from '@/components/Modals/Help'
-import Stats from '@/components/Modals/Stats'
-import Settings from '@/components/Modals/Settings'
-import styles from '@/styles/components/Modal.module.scss';
+import Help from '@/components/Modals/Help';
+import Stats from '@/components/Modals/Stats';
+import Settings from '@/components/Modals/Settings';
+// import styles from '@/styles/components/Modal.module.scss';
 
 const Modal = ({ open, onClose, displayType }) => {
   // Null display state:
@@ -19,6 +19,5 @@ const Modal = ({ open, onClose, displayType }) => {
 
   return null;
 }
-
 
 export default Modal;
