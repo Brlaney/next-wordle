@@ -1,5 +1,5 @@
 @import '../theme/theme';
-@import '../mixins/width.scss';
+// @import '../mixins/width.scss';
 @import '../mixins/height.scss';
 
 .main-container {
@@ -23,7 +23,7 @@
   }
 
   .grid {
-    height: 400px;
+    height: 420px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,7 +36,7 @@
       max-width: 62px;
       min-width: 62px;
       margin: 3px 3px;
-      padding: 0 4px;
+      // padding: 0 3px;
       border: 2px solid $box-border;
       text-align: center;
     }

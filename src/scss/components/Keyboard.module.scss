@@ -2,7 +2,7 @@
 @import '../mixins/width.scss';
 
 .keyboard-container {
-  height: 20vh;
+  // height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     padding: 0.23rem 0;
-    // margin: 0.2rem;
+    // margin-bottom: 0.33rem;
 
     .key {
       font-size: 16px;
